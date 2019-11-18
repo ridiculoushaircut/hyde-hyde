@@ -86,3 +86,162 @@
 		color: #8f5536;
 	}
 }
+
+html {
+	height: 100%;
+}
+
+.theme-base-rh {
+	@media (min-width: 768px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: stretch;
+		min-height: 100%;
+	}
+
+	.sidebar {
+		flex: 1 30%;
+		background-color: $gray-1;
+		color: $gray-6;
+
+		@media (min-width: 768px) {
+			width: inherit;
+			position: inherit;
+		}
+
+		.container {
+			padding: 0;
+			@media (min-width: 768px) {
+				max-width: 15rem;
+				margin: 0 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+		}
+
+		.site__title {
+			font-family: 'Fredoka One', sans-serif;
+		}
+
+		.author-image {
+			width: 130px;
+			margin: 0 auto;
+		}
+
+		a {
+			color: $gray-8;
+		}
+
+		a:hover {
+			color: $magenta;
+		}
+
+		@media (min-width: 320px) and (max-width: 767px) {
+			background: $gray-8;
+			color: white;
+
+			a, label {
+				color: white;
+			}
+		}
+
+		@media (min-width: 768px) {
+			border-left: solid 8px $lavendar;
+
+			.sidebar-nav {
+				font-size: 24pt;
+			
+				li {
+					margin: 2rem 0;
+				}
+
+				a {
+					color: $magenta;
+				}
+
+				a:hover {
+					text-decoration: underline;
+				}
+				// display: none;
+
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	.content {
+
+		@media (min-width: 768px) {
+			flex: 1 60%;
+			width: inherit;
+			margin: 0;
+			padding-right: 10%;
+			width: inherit !important;
+			max-width: inherit !important;
+		}
+
+		article header h1,
+		.item__title--big,
+		.section__title {
+			font-family: 'Fredoka One', sans-serif;
+		}
+
+		a {
+			color: $gray-8;
+		}
+
+		a:hover {
+			color: $magenta;
+		}
+
+		p a {
+			text-decoration: underline;
+		}
+
+		.section__title {
+			border-bottom: 1px dotted #ccc;
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	.copyright {
+		border-top: 1px solid $gray-2;
+		text-align: left;
+	}
+	
+	.related-posts li a:hover {
+		color: $white;
+	}
+
+	.main-menu {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.main-menu {
+			display: block;
+			padding-top: 4rem;
+			padding-bottom: 2rem;
+			font-size: 24pt;
+			
+			a {
+				color: $magenta;
+			}
+
+			ul {
+				display: flex;
+				justify-content: flex-start;
+				list-style: none;
+				margin: 0;
+				padding: 0;
+			}
+
+			li {
+				width: 100px;
+				
+			}
+		}
+	}
+}
